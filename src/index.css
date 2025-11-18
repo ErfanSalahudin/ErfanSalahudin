@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  background-image: url('./assets/Vector1.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #000; 
+}
+
+
+body::before {
+  content: '';
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+  z-index: -1; 
+}
