@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import cert1 from '../../assets/gambar7.jpg';
 import cert2 from '../../assets/gambar8.jpg';
 import arrowRight from '../../assets/Vector2.png';
@@ -7,6 +7,8 @@ import backgroundImage from '../../assets/gambar2.jpg';
 
 
 const Certified: React.FC = () => {
+  const [selectedCert, setSelectedCert] = useState<string | null>(null);
+
   const certVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 },
@@ -51,6 +53,7 @@ const Certified: React.FC = () => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.6, delay: index * 0.3 }}
               whileHover={{ scale: 1.05 }}
+              onClick={() => setSelectedCert(cert.img)}
             >
               <img src={cert.img} alt={cert.alt} className="w-[450px] h-[300px] object-cover rounded-xl shadow-lg border border-gray-700" />
               <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -62,6 +65,28 @@ const Certified: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedCert && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedCert(null)}
+          >
+            <motion.img
+              src={selectedCert}
+              alt="Certificate"
+              className="max-w-full max-h-full object-contain rounded-lg"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
