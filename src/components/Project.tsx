@@ -31,7 +31,7 @@ const Project: React.FC = () => {
       <div className="absolute inset-0 bg-black opacity-70"></div> 
       <div className="relative z-10 w-full">
         <motion.h2
-          className="text-6xl font-serif mb-6 text-center"
+          className="text-4xl md:text-6xl font-serif mb-6 text-center"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}

@@ -20,7 +20,7 @@ const Profile: React.FC = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-6xl font-serif mb-6">PROFILE</h2>
+          <h2 className="text-4xl md:text-6xl font-serif mb-6">PROFILE</h2>
           <div className="w-100 h-1 bg-white mb-10 mx-auto"></div>
           <p className="text-lg leading-normal font-sans">
             Graduate of Information Systems (GPA 3.20) with intensive experience as a Junior Web Developer,
@@ -38,7 +38,7 @@ const Profile: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div
-            className="relative w-[450px] h-[300px] rounded-2xl overflow-hidden shadow-lg border border-gray-700 cursor-pointer"
+            className="relative w-full max-w-[450px] h-[200px] md:h-[300px] rounded-2xl overflow-hidden shadow-lg border border-gray-700 cursor-pointer"
             onClick={() => setSelectedImage(project3)}
           >
             <img src={project3} alt="Coding on Laptop" className="w-full h-full object-cover" />

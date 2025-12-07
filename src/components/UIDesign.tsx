@@ -43,7 +43,7 @@ const UIDesign: React.FC = () => {
       </Link>
 
       <div className="mt-16 mb-24 p-6 border border-gray-800 rounded-xl shadow-2xl shadow-blue-900/20 transition duration-300 hover:border-blue-500/50">
-        <h2 className="text-3xl font-extrabold mb-6 pb-2 text-blue-400 uppercase tracking-widest border-b border-blue-600/50">
+        <h2 className="text-xl md:text-3xl font-extrabold mb-6 pb-2 text-blue-400 uppercase tracking-widest border-b border-blue-600/50">
           CASE STUDY GREEBOOKS
         </h2>
         
@@ -89,7 +89,7 @@ const UIDesign: React.FC = () => {
 <hr className="my-20 border-gray-800" /> 
       
       <div className="mb-24 p-6 border border-gray-800 rounded-xl shadow-2xl shadow-red-900/20 transition duration-300 hover:border-red-500/50">
-        <h2 className="text-3xl font-extrabold mb-6 pb-2 text-red-400 uppercase tracking-widest border-b border-red-600/50">
+        <h2 className="text-xl md:text-3xl font-extrabold mb-6 pb-2 text-red-400 uppercase tracking-widest border-b border-red-600/50">
           CASE STUDY TK INSAN HASANAH
         </h2>
         
@@ -97,10 +97,10 @@ const UIDesign: React.FC = () => {
             The Insan Hasanah Kindergarten mobile application is designed with a philosophy of visual warmth and functional efficiency. The user interface (UI) is deliberately designed to be bright and energetic, instantly reflecting a fun and positive learning environment, which is very suitable for early childhood education. We ensure that the design is truly user-friendly, with very simple navigation and clear iconography, so that it can be easily accessed by busy parents, teachers, and students under supervision.The color palette is dominated by a combination of blue, white, and red, taken directly from the school's visual identity. The cohesiveness of these colors not only strengthens the school's branding in the digital realm, but also helps create a structured and familiar environment for users. The main focus of the entire user experience (UX) is on easy access to crucial information. Whether it's class schedules, school announcements, student progress reports, or registration forms, all information is presented through a clean and intuitive layout. The app acts as a smart communication bridge, empowering parents with real-time updates and providing teachers with efficient tools to manage information, thereby increasing engagement and transparency between the school and parents.
         </p>
         
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <img src={gambar4} alt="TK Insan Hasanah UI Screenshot 1" className="w-full h-auto rounded-lg shadow-xl" />
           <img src={gambar5} alt="TK Insan Hasanah UI Screenshot 2" className="w-full h-auto rounded-lg shadow-xl" />
-          <img src={gambar6} alt="TK Insan Hasanah UI Screenshot 3" className="w-full h-220 rounded-lg shadow-xl" />
+          <img src={gambar6} alt="TK Insan Hasanah UI Screenshot 3" className="w-full h-auto rounded-lg shadow-xl" />
         </div>
 
         <a 
@@ -116,7 +116,7 @@ const UIDesign: React.FC = () => {
       <hr className="my-20 border-gray-800" />
 
       <div className="mb-24 p-6 border border-gray-800 rounded-xl shadow-2xl shadow-yellow-900/20 transition duration-300 hover:border-yellow-500/50">
-        <h2 className="text-3xl font-extrabold mb-6 pb-2 text-yellow-400 uppercase tracking-widest border-b border-yellow-600/50">
+        <h2 className="text-xl md:text-3xl font-extrabold mb-6 pb-2 text-yellow-400 uppercase tracking-widest border-b border-yellow-600/50">
           CASE STUDY BLUEBANDFLIX
         </h2>
 
@@ -126,9 +126,9 @@ const UIDesign: React.FC = () => {
               The navigation structure has been simplified and refined for quick discovery. A smart categorization system, responsive search bar, and adaptive layout ensure users can easily find the content they want or spontaneously discover new shows, maximizing viewing time and minimizing search time. Overall, Bluebandflix's design creates a streaming environment that is not only visually stunning but also highly efficient, ultimately increasing user retention and positioning the platform as the top choice in the competitive streaming market.
        </p>
 
-        <div className="grid grid-cols-3 gap-6">
-          <img src={gambar7} alt="Bluebandflix UI Screenshot 1" className="w-full h-200 rounded-lg shadow-xl" />
-          <img src={gambar8} alt="Bluebandflix UI Screenshot 2" className="w-full h-200 rounded-lg shadow-xl" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <img src={gambar7} alt="Bluebandflix UI Screenshot 1" className="w-full h-auto rounded-lg shadow-xl" />
+          <img src={gambar8} alt="Bluebandflix UI Screenshot 2" className="w-full h-auto rounded-lg shadow-xl" />
           <img src={gambar9} alt="Bluebandflix UI Screenshot 3" className="w-full h-auto rounded-lg shadow-xl" />
         </div>
 

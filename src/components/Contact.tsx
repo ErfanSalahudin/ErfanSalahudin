@@ -30,13 +30,13 @@ const Contact: React.FC = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-gray-600">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-600">
             <img src={profilePic} alt="RD MUHAMAD ERFAN SALAHUDIN" className="w-full h-full object-cover" />
           </div>
         </motion.div>
         <div className="md:w-1/2 text-left md:pl-20 pr-10">
           <motion.h2
-            className="text-6xl font-serif mb-6"
+            className="text-4xl md:text-6xl font-serif mb-6"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 + 0.8 }}
               >
                 <img src={item.icon} alt={item.alt} className="w-10 h-10 mr-6" />
-                <span className="text-xl font-sans">{item.text}</span>
+                <span className="text-lg md:text-xl font-sans">{item.text}</span>
               </motion.div>
             ))}
           </div>

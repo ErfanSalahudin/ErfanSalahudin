@@ -24,7 +24,7 @@ const Certified: React.FC = () => {
       <div className="relative z-20 w-full flex flex-col items-center justify-center">
         
         <motion.h2
-          className="text-6xl font-serif mb-6 text-white"
+          className="text-4xl md:text-6xl font-serif mb-6 text-white"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -55,7 +55,7 @@ const Certified: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               onClick={() => setSelectedCert(cert.img)}
             >
-              <img src={cert.img} alt={cert.alt} className="w-[450px] h-[300px] object-cover rounded-xl shadow-lg border border-gray-700" />
+              <img src={cert.img} alt={cert.alt} className="w-full max-w-[450px] h-[300px] object-cover rounded-xl shadow-lg border border-gray-700" />
               <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white text-3xl font-serif font-bold flex items-center">
                   {cert.title} <img src={arrowRight} alt="Right Arrow" className="inline-block w-8 h-8 ml-3" />
