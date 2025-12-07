@@ -1,9 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import project3 from '../../assets/ijazah.jpg';
 import backgroundImage from '../../assets/gambar2.jpg';
 
 const Profile: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
     <section 
       id="profile" 
@@ -36,11 +37,36 @@ const Profile: React.FC = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <div className="relative w-[450px] h-[300px] rounded-2xl overflow-hidden shadow-lg border border-gray-700">
+          <div
+            className="relative w-[450px] h-[300px] rounded-2xl overflow-hidden shadow-lg border border-gray-700 cursor-pointer"
+            onClick={() => setSelectedImage(project3)}
+          >
             <img src={project3} alt="Coding on Laptop" className="w-full h-full object-cover" />
           </div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.img
+              src={selectedImage}
+              alt="Profile Image"
+              className="max-w-full max-h-full object-contain rounded-lg"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
